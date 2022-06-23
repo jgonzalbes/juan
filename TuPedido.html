@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tu pedido</title>
+        <link rel="stylesheet" href="estilositio.css">
+        <link rel="stylesheet" type= "text/css" href="estilositio.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h2 class="logo-nombre">Baires Gourmet Restaurant</h2>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-link">INICIO</a>
+                <a href="menu.html" class="nav-link">MENÚ</a>               
+                <a href="Nosotros.html" class="nav-link">NOSOTROS</a>
+                <a href="TuPedido.html" class="nav-link">TU PEDIDO</a>
+             </nav>
+        </header>
+        <form class="form" onsubmit="return verificacionForm()">
+            <div class="fondo-pedidos">
+                <h2>Hacé tu pedido</h2>
+            <div class="pacodiv">
+                <input id="nombre" class="items" type="text" autocomplete="on" maxlength="100" value="Nombre"
+                 onfocus="onFocus(this)" onblur="onBlur(this)"  required>
+            </div>
+
+            <div class="pacodiv">
+                <input id="mail" class="items" type="email" autocomplete="on" maxlength="100" value="Email" 
+                onfocus="onFocus(this)" onblur="onBlur(this)"  required>
+            </div>
+
+            <div class="pacodiv">
+                <input id="telefono" class="items" type="tel" autocomplete="on" maxlength="100" 
+                value="Numero de telefono" onfocus="onFocus(this)" onblur="onBlur(this)">
+            </div>
+
+            <div class="textarea">
+                <textarea id="Des" class="texto-final" autocomplete="on" data-max-rows="3" 
+                placeholder="Ingrese aqui su pedido:" onfocus="onFocus(this)" onblur="onBlur(this)"  required></textarea>
+            </div>
+
+            <div class="boton">
+                    <input class="pb1" type="submit" value="Enviar" onclick="msg()">
+            </div>
+
+            <script>
+                function onBlur(el) {
+                    if (el.value == '') {
+                        el.value = el.defaultValue;
+                    }
+                }
+                function onFocus(el) {
+                    if (el.value == el.defaultValue) {
+                        el.value = '';
+                    }
+                }
+            </script>
+            </div>          
+        </form>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Sobre el Restaurante</h4>
+                        <ul>
+                            <li><a href="Nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="menu.html">Nuestros platos</a></li>
+                            
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Pedidos</h4>
+                        <ul>
+                            <li><a href="TuPedido.html">Para pedidos</a></li>
+                            <li><a href="index.html">volver al inicio</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Nuestras redes sociales</h4>
+                            <ul>
+                                <li><a href="https://www.instagram.com/colo_jm14/">Instagram</a></li>
+                                <li><a href="https://github.com/jgonzalbes/juan">Github</a></li>
+                                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                            </ul>                           
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </footer>                
+    </body>
+
+</html>

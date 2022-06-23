@@ -1,26 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">  
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sitio de cantina</title>
+        <title>Baires Gourmet Restaurant</title>
         <link rel="stylesheet" href="estilositio.css">
         <link rel="stylesheet" type= "text/css" href="estilositio.css">
+        <link href="css/estilositio.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     </head>
-    <body>
-        <div class="menu">
-            <div class="boton"><a href = "quienesSomos.html"> Quienes somos</a></div>
-            <div class="boton"><a href = "especialidades.html"> Especialidades</a></div>
-            <div class="boton"><a href = "nuestroLocal.html"> Nuestro local</a></div>
-            <div class="boton"><a href = "menu.html"> contacto</a></div>
-            
+    <body> 
+        <header>
+            <div class="logo">
+                <h2 class="logo-nombre">Baires Gourmet Restaurant</h2>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-link">INICIO</a>
+                <a href="menu.html" class="nav-link">MENÚ</a>               
+                <a href="Nosotros.html" class="nav-link">NOSOTROS</a>
+                <a href="TuPedido.html" class="nav-link">TU PEDIDO</a>
+             </nav>
+        </header>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img class="imgLocal" src="img/pizza peperonni.png" alt="pizza">
+            </div>
+            <div class="mySlides fade">
+                <img class="imgLocal" src="img/noquis.png" alt="ñoquis" >
+            </div>
+            <div class="mySlides fade">
+                <img class="imgLocal" src="img/fideos.png" alt="fideos" >
+            </div>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  
+                  slides[slideIndex-1].style.display = "flex";
+                   
+                  setTimeout(showSlides, 3500); 
+                }
+            </script>
         </div>
-        <h1>Restaurante Italiano</h1>
-        <h2>Bienvenidos y bienvenidas al Restaurante</h2>
+        <h1>De los platos más elegidos</h1>
+        <section class="contenedormenu">
+            <div class="menu">
+                <img class="fotomenu" src="img/pizza fugazzeta.png" alt="Pizza">
+                <div class="textomenu">
+                    <h2>Pizza fugazzeta</h2>
+                    <p>De las pizzas mas pedidas por la gente, Te la vas a perder?</p>
+                    <div id="botonceleste">
+                        <a href="menu.html ">Ver menú</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <img class="fotomenu" src="img/fideos carbonara.png" alt="fideos">
+                <div class="textomenu">
+                    <h2>Tallarines a la carbonara</h2>
+                    <p>Una de las especialidades de la casa, la pasta. No te quedes con las ganas</p>
+                    <div id="botonceleste">
+                        <a href="menu.html">Ver menú</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <img class="fotomenu" src="img/milanesa napolitana.png" alt="Milanesa napolitana">
+                <div class="textomenu">
+                    <h2>Milanesa napolitana</h2>
+                    <p>La mejor milanesa de Buenos Aires, otro plato muy requerido por la gente</p>
+                    <div id="botonceleste">
+                        <a href="menu.html">Ver menú</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-       
-        
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Sobre el Restaurante</h4>
+                        <ul>
+                            <li><a href="Nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="menu.html">Nuestros platos</a></li>
+                            
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Pedidos</h4>
+                        <ul>
+                            <li><a href="TuPedido.html">Para pedidos</a></li>
+                            <li><a href="index.html">volver al inicio</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Nuestras redes sociales</h4>
+                            <ul>
+                                <li><a href="https://www.instagram.com/colo_jm14/">Instagram</a></li>
+                                <li><a href="https://github.com/jgonzalbes/juan">Github</a></li>
+                                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                            </ul>
+                           
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </footer>        
     </body>
-
 </html>
